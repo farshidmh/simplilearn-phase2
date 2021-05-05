@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JohnShop</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>NewProductServlet</servlet-name>
+    <servlet-class>com.sample.servlet.NewProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowProductServlet</servlet-name>
+    <servlet-class>com.sample.servlet.ShowProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteProductServlet</servlet-name>
+    <servlet-class>com.sample.servlet.DeleteProductServlet</servlet-class>
+  </servlet>
+  
+  
+    <servlet>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <servlet-class>com.sample.servlet.UpdateProductServlet</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <url-pattern>/updateProduct</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>DeleteProductServlet</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowProductServlet</servlet-name>
+    <url-pattern>/showsProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewProductServlet</servlet-name>
+    <url-pattern>/newProduct</url-pattern>
+  </servlet-mapping>
+</web-app>

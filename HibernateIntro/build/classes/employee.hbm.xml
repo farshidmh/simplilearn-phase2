@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-mapping>
+
+
+
+	<class name="Employee" table="tbl_emp">
+
+		<id name="employeeId">
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="firstName"></property>
+		<property name="lastName"></property>
+
+		<list name="desks" cascade="all">
+			<key column="eid"></key>
+			<one-to-many class="Desk"></one-to-many>
+		</list>
+
+
+
+	</class>
+
+
+
+
+</hibernate-mapping>
